@@ -59,3 +59,26 @@ ul {
     color: #333;
     margin-top: 20px;
     }
+
+    #join {
+        text-align: center;
+        color: #333;
+        margin-top: 20px;
+        }
+        input {
+        margin: 10px;
+        }
+        button {
+        margin: 10px;
+        }
+
+        form {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+}
+h2{
+    text-align: center;
+}
+
+        
