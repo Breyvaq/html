@@ -37,7 +37,14 @@ ul {
     color: #333;
     margin-top: 20px;
     }
-
+    form ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+        
+    }
     input {
     margin: 10px;
     }
@@ -53,11 +60,15 @@ ul {
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: perspective(300px) rotateX(1deg);
     }
     .description {
-    text-align: center;
+    text-align: justify;
     color: #333;
-    margin-top: 20px;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
     }
 
     #join {
@@ -79,6 +90,30 @@ ul {
 }
 h2{
     text-align: center;
+    color: #333;
+    margin-top: 25px;
+
 }
 
-        
+.button{
+    text-align: center;
+}
+.PersonaL{
+    text-align: center;
+    width: 100%;
+    margin-top: 2%;
+}
+.PersonaL img{
+    width: 115px;
+    height: 100px;
+}
+
+.gif{
+    text-align: center;
+}
+.gif img{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: perspective(300px) rotateX(2deg);
+}
