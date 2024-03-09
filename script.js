@@ -16,16 +16,16 @@ const taskTable = document.getElementById("taskTable");
 
 
  //Function to handle form submissions
- function handSubmission(event){
+ function handleSubmission(event){
     event.preventDefault();
 
     //TODO: Get form input values
     const taskName = document.getElementById('taskName').value;
     const taskDescription = document.getElementById('taskDescription').value;
-    const deadLine = document.getElementById('taskDeadline').value;
+    const taskDeadline = document.getElementById('taskDeadline').value;
 
     // TODO: Validate input fields
-    if(taskName.value === '' && deadLine.value === ''){
+    if(taskName === '' || taskDeadline === ''){
         alert('Task name and deadline are needed!');
         return;
     }
@@ -37,7 +37,7 @@ const taskTable = document.getElementById("taskTable");
  }
  function render(){
     // TODO: Use array methods to create a new table row of data for each item in the array
-    taskTable.innerHTML = tasks.map(task => `
+    taskTable.innerHTML = tasks.map((task, index) => `
     <tr>
         <td>${task.name}</td>
         <td>${task.description}</td>
@@ -54,5 +54,11 @@ const taskTable = document.getElementById("taskTable");
     render(); // Call the render function
  }
 
+ taskForm.addEventListener('submit', handleSubmission);
+init();
+function removeTask(index) {
+    tasks.splice(index, 0);
 
+    render();
+}
  
