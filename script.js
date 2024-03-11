@@ -31,21 +31,21 @@ const taskTable = document.getElementById("taskTable");
     }
 
     // TODO: Update the tasks array
-    tasks.push({ name: taskName, description: taskDescription, deadline: taskDeadline })
+    tasks.push({ name: taskName, description: taskDescription, deadline: taskDeadline, isCompleted: false })
 
     render();
  }
  function render(){
     // TODO: Use array methods to create a new table row of data for each item in the array
-    taskTable.innerHTML = tasks.map((task, index) => `
-    <tr>
-        <td>${task.name}</td>
-        <td>${task.description}</td>
-        <td>${task.deadline}</td>
-        <td><button onclick="markTaskComplete(this)">Complete</button></td>
-        <td><button onclick="removeTask(this)">Remove</button></td>
-    </tr>
-`).join('');
+     taskTable.innerHTML = tasks.map((task, index) => `
+        <tr class="${task.isCompleted ? 'task-was-completed' : ''}"> 
+            <td>${task.name}</td>
+            <td>${task.description}</td>
+            <td>${task.deadline}</td>
+            <td><button onclick="markTaskComplete(${index})">Complete</button></td>
+            <td><button onclick="removeTask(${index})">Remove</button></td>
+        </tr>
+    `).join('');
  }
  
  function init(){
@@ -53,12 +53,17 @@ const taskTable = document.getElementById("taskTable");
     tasks = []; //Reset the tasks array
     render(); // Call the render function
  }
-
- taskForm.addEventListener('submit', handleSubmission);
+taskForm.addEventListener('submit', handleSubmission);
 init();
-function removeTask(index) {
-    tasks.splice(index, 0);
 
+function removeTask(index) {
+    tasks.splice(index, 1);
     render();
 }
+
+function markTaskComplete(index) {
+    tasks[index].isCompleted = !tasks[index].isCompleted; // Toggle completion status
+    render();
+}
+
  
