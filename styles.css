@@ -17,3 +17,80 @@ form {
     margin-bottom: 20px;
 }
 /* Add more styles as needed */
+.task-was-completed {
+    text-decoration: line-through; 
+    background-color: #d3d3d3; 
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.complete-btn {
+    background-color: #f0ad4e;
+}
+
+.complete-btn:hover {
+    background-color: #ec971f;
+}
+
+.remove-btn {
+    background-color: #d9534f;
+}
+
+.remove-btn:hover {
+    background-color: #c9302c;
+}
